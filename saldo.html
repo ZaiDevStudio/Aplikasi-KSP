@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekapan Saldo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="sidebar">
+        <div class="sidebar-close">&times;</div>
+        <a href="index.html">Data Nasabah</a>
+        <a href="tambah_nasabah.html">Tambah Nasabah</a>
+        <a href="pinjaman.html">Data Pinjaman</a>
+        <a href="tambah_pinjaman.html">Tambah Pinjaman</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="tabungan.html">Tabungan Nasabah</a>
+        <a href="saldo.html">Rekapan Saldo</a>
+        <a href="bukti.html">Bukti Pembayaran</a>
+    </nav>
+    <header>
+        <div class="brand"><button class="hamburger">☰</button><span>CATATAN KSP ONLINE</span></div>
+    </header>
+
+    <main>
+        <h2>Rekapan Saldo Keseluruhan</h2>
+        <div class="dashboard-grid" id="dashboard-saldo">
+            <div class="stat-card">
+                <span>Total Target Pinjaman (Piutang)</span>
+                <h3 id="total-pinjaman">Rp 0</h3>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                <span>Total Sudah Dibayar</span>
+                <h3 id="total-dibayar">Rp 0</h3>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #dc3545, #ff6b6b);">
+                <span>Sisa Saldo Pinjaman (Di Nasabah)</span>
+                <h3 id="sisa-tagihan">Rp 0</h3>
+            </div>
+            <div class="stat-card" style="background: linear-gradient(135deg, #fd7e14, #fcc419);">
+                <span>Total Tabungan Nasabah</span>
+                <h3 id="total-tabungan">Rp 0</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>@2025 Koperasi Simpan Pinjam. Developer Y. Zai, A.Md.Kom</footer>
+    <script src="script.js"></script>
+</body>
+</html>

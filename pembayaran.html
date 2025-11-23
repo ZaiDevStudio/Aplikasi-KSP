@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Nasabah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="sidebar">
+        <div class="sidebar-close">&times;</div>
+        <a href="index.html">Data Nasabah</a>
+        <a href="tambah_nasabah.html">Tambah Nasabah</a>
+        <a href="pinjaman.html">Data Pinjaman</a>
+        <a href="tambah_pinjaman.html">Tambah Pinjaman</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="tabungan.html">Tabungan Nasabah</a>
+        <a href="saldo.html">Rekapan Saldo</a>
+        <a href="bukti.html">Bukti Pembayaran</a>
+    </nav>
+    <header>
+        <div class="brand"><button class="hamburger">☰</button><span>CATATAN KSP ONLINE</span></div>
+    </header>
+
+    <main>
+        <h2>Pembayaran Nasabah</h2>
+        <div id="form-pembayaran">
+            <div class="search-box" style="display:flex; gap:10px">
+                <input type="text" id="cari-nasabah-bayar" placeholder="Masukkan Nama Nasabah untuk Bayar...">
+                <button class="btn-primary" id="btn-cari-bayar" style="width:auto">Cari</button>
+            </div>
+            
+            <div id="hasil-pencarian-bayar" style="margin-top:20px">
+                </div>
+        </div>
+    </main>
+
+    <footer>@2025 Koperasi Simpan Pinjam. Developer Y. Zai, A.Md.Kom</footer>
+    <script src="script.js"></script>
+</body>
+</html>

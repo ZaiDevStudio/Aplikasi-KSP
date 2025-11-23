@@ -1,0 +1,299 @@
+/* style.css */
+:root {
+    --primary: #0056b3; /* Biru Tua Profesional */
+    --secondary: #00a8cc; /* Biru Muda Cerah */
+    --accent: #ffc107; /* Kuning untuk highlight */
+    --light: #f4f7f6;
+    --dark: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Nav */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.brand img {
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--white);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 200;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--dark);
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* Overlay when sidebar is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 150;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--secondary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0,86,179,0.2);
+}
+
+button.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button.btn-primary:hover {
+    background: #004494;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Cards for Pinjaman */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.card-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.status-lunas {
+    color: green;
+    font-weight: bold;
+}
+
+.status-aktif {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Dashboard/Saldo Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-card h3 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Actions */
+.action-btn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit { background-color: #ffc107; color: black; }
+.delete { background-color: #dc3545; }
+.pay { background-color: #28a745; }
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Utility */
+.search-box {
+    margin-bottom: 20px;
+}

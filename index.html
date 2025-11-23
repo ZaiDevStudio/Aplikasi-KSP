@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Nasabah - KSP Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="sidebar">
+        <div class="sidebar-close">&times;</div>
+        <div class="brand" style="padding: 0 20px; margin-bottom: 20px; color:var(--primary);">MENU KSP</div>
+        <a href="index.html">Data Nasabah</a>
+        <a href="tambah_nasabah.html">Tambah Nasabah</a>
+        <a href="pinjaman.html">Data Pinjaman</a>
+        <a href="tambah_pinjaman.html">Tambah Pinjaman</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="tabungan.html">Tabungan Nasabah</a>
+        <a href="saldo.html">Rekapan Saldo</a>
+        <a href="bukti.html">Bukti Pembayaran</a>
+    </nav>
+
+    <header>
+        <div class="brand">
+            <button class="hamburger">☰</button>
+            <img src="KSP.png" alt="Logo" onerror="this.style.display='none'"> <span>CATATAN KSP ONLINE</span>
+        </div>
+    </header>
+
+    <main>
+        <h2>Data Nasabah</h2>
+        <div class="search-box">
+            <input type="text" id="search-nasabah" placeholder="Cari nasabah berdasarkan nama...">
+        </div>
+        
+        <div class="table-responsive" id="tabel-nasabah">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Usaha</th>
+                        <th>No HP/WA</th>
+                        <th>Alamat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        @2025 Koperasi Simpan Pinjam. Developer Y. Zai, A.Md.Kom
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pinjaman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="sidebar">
+        <div class="sidebar-close">&times;</div>
+        <a href="index.html">Data Nasabah</a>
+        <a href="tambah_nasabah.html">Tambah Nasabah</a>
+        <a href="pinjaman.html">Data Pinjaman</a>
+        <a href="tambah_pinjaman.html">Tambah Pinjaman</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="tabungan.html">Tabungan Nasabah</a>
+        <a href="saldo.html">Rekapan Saldo</a>
+        <a href="bukti.html">Bukti Pembayaran</a>
+    </nav>
+    <header>
+        <div class="brand"><button class="hamburger">☰</button><span>CATATAN KSP ONLINE</span></div>
+    </header>
+
+    <main>
+        <h2>Input Pinjaman Baru</h2>
+        <form id="form-pinjaman" style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+            <div class="form-group">
+                <label>Tanggal</label>
+                <input type="date" id="tanggal" required>
+            </div>
+            <div class="form-group">
+                <label>Nama Nasabah</label>
+                <select id="nama_nasabah" required>
+                    <option value="">-- Pilih Nasabah --</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Pinjaman Ke-</label>
+                <input type="number" id="pinjaman_ke" value="1" required>
+            </div>
+            <hr style="margin: 20px 0;">
+            
+            <div class="form-group">
+                <label>Pinjaman Pokok (Rp)</label>
+                <input type="number" id="pokok" placeholder="Contoh: 1000000" required>
+            </div>
+            
+            <div style="display:flex; gap:10px">
+                <div class="form-group" style="flex:1">
+                    <label>Jasa (%)</label>
+                    <input type="number" id="jasa_persen" value="20" required>
+                </div>
+                <div class="form-group" style="flex:1">
+                    <label>Jumlah Dibayar (Otomatis)</label>
+                    <input type="text" id="display_jumlah_dibayar" readonly style="background:#eee">
+                    <input type="hidden" id="jumlah_dibayar">
+                </div>
+            </div>
+
+            <div style="display:flex; gap:10px">
+                <div class="form-group" style="flex:1">
+                    <label>Periode Cicilan</label>
+                    <select id="periode">
+                        <option value="Harian">Harian</option>
+                        <option value="Mingguan" selected>Mingguan</option>
+                        <option value="Bulanan">Bulanan</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex:1">
+                    <label>Jumlah Angsuran (Kali)</label>
+                    <input type="number" id="jumlah_angsuran" value="10" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nominal Cicilan Per Kali (Otomatis)</label>
+                <input type="text" id="display_cicilan" readonly style="background:#eef; font-weight:bold; color:blue;">
+                <input type="hidden" id="nominal_cicilan">
+            </div>
+
+            <hr style="margin: 20px 0;">
+            
+            <div style="display:flex; gap:10px">
+                <div class="form-group" style="flex:1">
+                    <label>Tabungan (%)</label>
+                    <input type="number" id="tabungan_persen" value="2">
+                </div>
+                <div class="form-group" style="flex:1">
+                    <label>Biaya Admin (%)</label>
+                    <input type="number" id="admin_persen" value="2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label style="font-size:1.2rem">Uang Diterima Nasabah</label>
+                <input type="text" id="display_diterima" readonly style="background:#dff0d8; font-size:1.5rem; font-weight:bold; text-align:center;">
+                <input type="hidden" id="uang_diterima">
+            </div>
+
+            <button type="submit" class="btn-primary">Proses Pinjaman</button>
+        </form>
+    </main>
+
+    <footer>@2025 Koperasi Simpan Pinjam. Developer Y. Zai, A.Md.Kom</footer>
+    <script src="script.js"></script>
+</body>
+</html>

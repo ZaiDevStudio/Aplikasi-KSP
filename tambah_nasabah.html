@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Nasabah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="sidebar">
+        <div class="sidebar-close">&times;</div>
+        <a href="index.html">Data Nasabah</a>
+        <a href="tambah_nasabah.html">Tambah Nasabah</a>
+        <a href="pinjaman.html">Data Pinjaman</a>
+        <a href="tambah_pinjaman.html">Tambah Pinjaman</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="tabungan.html">Tabungan Nasabah</a>
+        <a href="saldo.html">Rekapan Saldo</a>
+        <a href="bukti.html">Bukti Pembayaran</a>
+    </nav>
+
+    <header>
+        <div class="brand">
+            <button class="hamburger">☰</button>
+            <span>CATATAN KSP ONLINE</span>
+        </div>
+    </header>
+
+    <main>
+        <h2>Tambah Nasabah Baru</h2>
+        <form id="form-nasabah" style="max-width: 600px; background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" id="nama" required>
+            </div>
+            <div class="form-group">
+                <label>Jenis Usaha</label>
+                <input type="text" id="usaha" required>
+            </div>
+            <div class="form-group">
+                <label>Tempat Usaha</label>
+                <input type="text" id="tempat" required>
+            </div>
+            <div class="form-group">
+                <label>Alamat Rumah</label>
+                <textarea id="alamat" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>No HP/WA</label>
+                <input type="tel" id="hp" required>
+            </div>
+            <div class="form-group">
+                <label>Foto (Opsional)</label>
+                <input type="file" id="foto">
+            </div>
+            <button type="submit" class="btn-primary">Simpan Data</button>
+        </form>
+    </main>
+
+    <footer>@2025 Koperasi Simpan Pinjam. Developer Y. Zai, A.Md.Kom</footer>
+    <script src="script.js"></script>
+</body>
+</html>
